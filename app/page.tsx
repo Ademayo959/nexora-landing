@@ -1,69 +1,60 @@
 import Image from "next/image";
+import bg from '@/assets/logo2.png'
+import woov from '@/assets/woov.png'
+import devlab from '@/assets/devlab.png'
+import bay from '@/assets/bay.png'
+import collab from '@/assets/collab.png'
+import connect from '@/assets/connect.png'
+import edge from '@/assets/edge.png'
+import ramp from '@/assets/ramp.png'
+
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-[115vh] relative overflow-hidden">
+      <Image src={bg} fill priority alt='' className='object-cover scale-100 object-[45%_90%] -z-10' />
+      <header className="max-w-7xl border border-black/10 mx-auto pl-8 pr-1 h-13 my-4 backdrop-blur-[2px] rounded-full flex items-center justify-between">
+        <div className="flex items-center gap-10">
+          <div>
+            <p className="font-inter font-[500] text-[1.3rem]">NEXORA™</p>
+          </div>
+          <div className="flex gap-5 items-center">
+            <p className="font-[430] text-[1.1rem]">Insights</p>
+            <p className="font-[430] text-[1.1rem]">Solutions</p>
+            <p className="font-[430] text-[1.1rem]">Pricing</p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="flex gap-6 items-center font-inter">
+          <p className="font-[430] text-[1.15rem]">Login</p>
+          <div className="h-11 bg-black text-white flex items-center justify-center px-5 rounded-full transition-all hover:scale-[1.05]">
+            <p>Try Now</p>
+          </div>
         </div>
-      </main>
+      </header>
+      {/*Hero section */}
+      <section className="mt-14">
+        <p className="font-oswald text-[5rem] mb-4 justify-self-center w-full max-w-[35rem] px-4 tracking-tight text-black/97 text-center leading-21 font-semibold">Bold Ideas That Start With Vision.</p>
+        <p className="justify-self-center font-inter font-[480] text-center w-110 text-[1.1rem]">We help modern brands craft digital stories that inspire action and drive results</p>
+        <div className="flex items-center gap-2 border border-gray-400 bg-black rounded-full px-6 w-fit text-white py-3 justify-self-center mt-4  transition-all hover:gap-2.5 cursor-pointer">
+          <p className="font-[480] text-[1.2rem]">Get In Touch</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 mt-0.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+          </svg>
+        </div>
+      </section>
+      {/*footer */}
+      <div className="absolute bottom-0 mx-auto w-full">
+        <p className="text-[1.2rem] font-[500] justify-self-center text-black">Trusted by teams of every scale</p>
+        <div className="flex justify-between max-w-7xl mx-auto my-4">
+          <Image src={devlab} alt="" className=" h-8 w-35 object-cover" />
+          <Image src={woov} alt="" className=" h-8 w-35 object-cover" />
+          <Image src={edge} alt="" className=" h-8 w-35 object-cover" />
+          <Image src={collab} alt="" className=" h-8 w-35 object-cover" />
+          <Image src={connect} alt="" className=" h-8 w-35 object-cover" />
+          <Image src={ramp} alt="" className=" h-8 w-35 object-cover" />
+          <Image src={bay} alt="" className=" h-8 w-35 object-cover" />
+        </div>
+      </div>
     </div>
   );
 }
